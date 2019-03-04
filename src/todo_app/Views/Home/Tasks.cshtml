@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Tasks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-striped tableData">
+    <thead>
+        <tr class="table-success">
+            <th scope="col">Description</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="e in tasks">
+
+            <td>{{e.Description}}</td>
+
+            <td>{{e.Status}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<script src="~/Scripts/angular.min.js"></script>
+
+<script src="~/Scripts/angular/ng-main-controller.js"></script>
+
+
