@@ -1,21 +1,3 @@
-﻿<div class="container-fluid">
-    <form>
-        <div class="form-group">
-            <label for="Description">Description</label>
-            <input type="text" class="form-control" id="Description" aria-describedby="Description" placeholder="Enter description" ng-model="task.Description">
-        </div>
-        <div class="form-group">
-            <label for="Status">Status</label>
-            <select class="form-control" id="Status" ng-model="task.Status">
-                <option>Active</option>
-                <option>Pending</option>
-                <option>Denied</option>
-            </select>
-        </div>
-        <button type="button" class="btn btn-primary" ng-click="savedata()">Add</button>
-    </form>
-</div>
+﻿<div ng-view></div>
 
-<script src="~/Scripts/angular.min.js"></script>
 
-<script src="~/Scripts/angular/ng-main-controller.js"></script>

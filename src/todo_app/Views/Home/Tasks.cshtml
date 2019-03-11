@@ -1,28 +1,28 @@
-﻿
-@{
-    ViewBag.Title = "Tasks";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
+﻿<div class="container-fluid table-container">
 <table class="table table-striped tableData">
     <thead>
         <tr class="table-success">
+            <th scope="col">&numero;</th>
             <th scope="col">Description</th>
             <th scope="col">Status</th>
+            <th scope="col">Created On</th>
+            <th scope="col">Deadline</th>
+            <th scope="col">Actions</th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="e in tasks">
-
-            <td>{{e.Description}}</td>
-
-            <td>{{e.Status}}</td>
+        <tr ng-repeat="task in model.tasks">
+            <td>{{$index + 1}}</td>
+            <td>{{task.Description}}</td>
+            <td>{{task.Status}}</td>
+            <td>{{task.CreatedOn | dateFormat}}</td>
+            <td>{{task.Deadline | deadlineDateFormat}}</td>
+            <td ng-click="model.deleteTaskById(task.Id)"><ion-icon class="delete-icon" name="cut"></ion-icon></td>
+            <td ng-click="model.openTaskModal(task.Id)"><ion-icon class="delete-icon" name="build"></ion-icon></td>
         </tr>
     </tbody>
 </table>
+    </div>
+@*<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>*@
 
-<script src="~/Scripts/angular.min.js"></script>
-
-<script src="~/Scripts/angular/ng-main-controller.js"></script>
-
-
+@{ Html.RenderPartial("~/Views/Home/Update.cshtml"); }

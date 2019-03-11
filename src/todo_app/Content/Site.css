@@ -5,9 +5,18 @@
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
-    padding-right: 15px;
+    padding-right: 15px; 
 }
 
+.left-side-menu {
+    width: 250px;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    background: #4e54c8; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8f94fb, #6c71ca); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8f94fb, #6c71ca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
@@ -22,10 +31,27 @@ textarea {
     max-width: 280px;
 }
 
-form {
-    padding-top: 20px;
-}
-
 table {
     margin-top: 20px;
 }
+
+.delete-icon:hover {
+    cursor: pointer;
+}
+
+.sidebar-nav li a {
+    color: #cedce4;
+    display: block;
+    padding: 10px 15px 10px 30px;
+    text-decoration: none;
+}
+
+    .sidebar-nav li a:hover {
+        color: white;
+        background-color: rgba(255, 255, 255, 0.00) !important
+    }
+    .sidebar-nav li a:focus {
+        color: white;
+        background-color: rgba(255, 255, 255, 0.00) !important
+    }
+

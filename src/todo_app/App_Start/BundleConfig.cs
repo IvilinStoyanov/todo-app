@@ -24,7 +24,18 @@ namespace todo_app
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/bootstrap-datepicker.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/ui-bootstrap")
+                .Include(
+                    "~/Scripts/ui-bootstrap-tpls-1.3.3.min.js"
+                ));
+
+            bundles.Add(new StyleBundle("~/bundles/bootstrap-datepicker")
+               .Include(
+                   "~/Scripts/bootstrap-datepicker.js"
+               ));
         }
     }
 }
