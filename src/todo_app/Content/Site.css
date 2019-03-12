@@ -5,7 +5,7 @@
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
-    padding-right: 15px; 
+    padding-right: 15px;
 }
 
 .left-side-menu {
@@ -50,8 +50,27 @@ table {
         color: white;
         background-color: rgba(255, 255, 255, 0.00) !important
     }
+
     .sidebar-nav li a:focus {
         color: white;
         background-color: rgba(255, 255, 255, 0.00) !important
     }
 
+.table-actions > div {
+    display: inline-block;
+    padding-right: 8px;
+}
+
+.warning {
+    background-color: rgba(224, 214, 41, 0.54) !important;
+}
+
+.overdue {
+    background-color: rgba(222, 54, 54, 0.30) !important;
+}
+
+}
+
+.ok {
+    background-color: rgba(234, 234, 234, 0.44) !important;
+}

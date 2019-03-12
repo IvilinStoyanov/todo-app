@@ -1,28 +1,32 @@
 ﻿<div class="container-fluid table-container">
-<table class="table table-striped tableData">
-    <thead>
-        <tr class="table-success">
-            <th scope="col">&numero;</th>
-            <th scope="col">Description</th>
-            <th scope="col">Status</th>
-            <th scope="col">Created On</th>
-            <th scope="col">Deadline</th>
-            <th scope="col">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="task in model.tasks">
-            <td>{{$index + 1}}</td>
-            <td>{{task.Description}}</td>
-            <td>{{task.Status}}</td>
-            <td>{{task.CreatedOn | dateFormat}}</td>
-            <td>{{task.Deadline | deadlineDateFormat}}</td>
-            <td ng-click="model.deleteTaskById(task.Id)"><ion-icon class="delete-icon" name="cut"></ion-icon></td>
-            <td ng-click="model.openTaskModal(task.Id)"><ion-icon class="delete-icon" name="build"></ion-icon></td>
-        </tr>
-    </tbody>
-</table>
-    </div>
+    <table class="table table-striped tableData">
+        <thead>
+            <tr class="table-success">
+                <th scope="col">&numero;</th>
+                <th scope="col">Description</th>
+                <th scope="col">Status</th>
+                <th scope="col">Created On</th>
+                <th scope="col">Deadline</th>
+                <th scope="col">Remaining Days</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="task-{{task.Id}}" ng-class="task.DeadlineStatus" ng-repeat="task in model.tasks">
+                <td>{{$index + 1}}</td>
+                <td>{{task.Description}}</td>
+                <td>{{task.Status}}</td>
+                <td>{{task.CreatedOn | dateFormat}}</td>
+                <td>{{task.Deadline | deadlineDateFormat}}</td>
+                <td>{{task.RemainingDays}}</td>
+                <td class="table-actions">
+                    <div ng-click="model.deleteTaskById(task.Id)"><ion-icon class="delete-icon" name="cut"></ion-icon></div>
+                    <div ng-click="model.openTaskModal(task.Id)"><ion-icon class="delete-icon" name="build"></ion-icon> </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 @*<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>*@
 
 @{ Html.RenderPartial("~/Views/Home/Update.cshtml"); }
