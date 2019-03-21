@@ -25,7 +25,8 @@ namespace todo_app
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/bootstrap-datepicker.css"));
+                      "~/Content/bootstrap-datepicker.css",
+                      "~/Content/animate.min.css"));
 
             bundles.Add(new StyleBundle("~/bundles/ui-bootstrap")
                 .Include(

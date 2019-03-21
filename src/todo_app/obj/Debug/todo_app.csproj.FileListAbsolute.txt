@@ -236,3 +236,4 @@ D:\Github\todo-app\src\todo_app\bin\roslyn\vbc.exe
 D:\Github\todo-app\src\todo_app\bin\roslyn\vbc.exe.config
 D:\Github\todo-app\src\todo_app\bin\roslyn\vbc.rsp
 D:\Github\todo-app\src\todo_app\bin\roslyn\VBCSCompiler.exe.config
+D:\Github\todo-app\src\todo_app\obj\Debug\todo_app.csprojAssemblyReference.cache

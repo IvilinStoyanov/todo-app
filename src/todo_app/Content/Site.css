@@ -1,11 +1,89 @@
 ﻿body {
-    padding-bottom: 20px;
+    background: rgba(203, 203, 210, 0.15);
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    body .wrapper {
+        min-height: 100vh;
+        position: relative;
+    }
+
+.wrapper {
+    position: relative;
+    top: 0;
+    height: 100vh;
+}
+
+/* sidebar section */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: auto;
+    left: 0;
+    width: 260px;
+    display: block;
+    z-index: 1;
+    color: #fff;
+    font-weight: 200;
+    background-size: cover;
+    background-position: center center;
+    background-color: #9368E9;
+}
+
+    .sidebar .side-menu-wrapper {
+        position: relative;
+        max-height: calc(100vh - 75px);
+        min-height: 100%;
+        overflow: auto;
+        width: 260px;
+        z-index: 4;
+        padding-bottom: 100px;
+    }
+
+    /*side menu items*/
+    .sidebar .nav li > a {
+        color: #FFFFFF;
+        text-transform: uppercase;
+        margin: 5px 15px;
+        opacity: .86;
+        border-radius: 4px;
+        display: block;
+    }
+
+    .sidebar .nav a {
+        -webkit-transition: all 150ms ease-in;
+        -moz-transition: all 150ms ease-in;
+        -o-transition: all 150ms ease-in;
+        transition: all 150ms ease-in;
+    }
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+a {
+    color: #1DC7EA;
+}
+
+    a:hover, a:focus {
+        color: #42d0ed;
+       background-color: rgba(254, 254, 254, 0.39) !important;
+        text-decoration: none;
+    }
+
+    a:focus, a:active {
+        outline: 0;
+    }
+
+
+/*main panel section*/
+.main-panel {
+    position: relative;
+    z-index: 2;
+    float: right;
+    width: calc(100% - 260px);
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
