@@ -27,9 +27,9 @@ namespace todo_app.Controllers
             {
                 data.AddTask(task);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                throw new ArgumentException(e.ToString());
+                throw new Exception(ex.Message);
             }
 
             return Json(task);
@@ -42,10 +42,9 @@ namespace todo_app.Controllers
             {
                 data.DeleteTaskById(id);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-
-                throw new ArgumentException(e.ToString());
+                throw new Exception(ex.Message);
             }
             return Json("Deleted");
         }
@@ -56,10 +55,9 @@ namespace todo_app.Controllers
             {
                 data.UpdateTaskById(id, task);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-
-                throw new ArgumentException(e.ToString());
+                throw new Exception(ex.Message);
             }
             return Json(task);
         }
@@ -83,7 +81,8 @@ namespace todo_app.Controllers
 
                     CreatedOn = Convert.ToDateTime(row["CreatedOn"].ToString()),
 
-                    Deadline = Convert.ToDateTime(row["Deadline"].ToString())
+                    Deadline = Convert.ToDateTime(row["Deadline"].ToString()),
+
                 });
             }
             return Json(tasks, JsonRequestBehavior.AllowGet);

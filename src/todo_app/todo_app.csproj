@@ -126,6 +126,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Common\Services\CommonService.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SystemController.cs" />
     <Compile Include="Controllers\TemplateController.cs" />
@@ -160,9 +162,11 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angular\app.config.js" />
+    <Content Include="Scripts\angular\directives\common.directives.js" />
+    <Content Include="Scripts\angular\filters\task-app.filter.js" />
     <Content Include="Scripts\angular\ng-main-controller.js" />
-    <Content Include="Scripts\angular\task-add\task-add.component.js" />
-    <Content Include="Scripts\angular\task-list\task-list.component.js" />
+    <Content Include="Scripts\angular\components\task-add\task-add.component.js" />
+    <Content Include="Scripts\angular\components\task-list\task-list.component.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -201,9 +205,11 @@
     <Content Include="Views\Home\Tasks.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Update.cshtml" />
+    <Content Include="Views\Shared\_Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Error\" />
     <Folder Include="Views\System\" />
     <Folder Include="Views\Template\" />
   </ItemGroup>

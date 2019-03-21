@@ -18,14 +18,21 @@
                 <td>{{task.Status}}</td>
                 <td>{{task.CreatedOn | dateFormat}}</td>
                 <td>{{task.Deadline | deadlineDateFormat}}</td>
-                <td>{{task.RemainingDays}}</td>
+                <td class="remaining-days">{{task.RemainingDays}}</td>
                 <td class="table-actions">
-                    <div ng-click="model.deleteTaskById(task.Id)"><ion-icon class="delete-icon" name="cut"></ion-icon></div>
-                    <div ng-click="model.openTaskModal(task.Id)"><ion-icon class="delete-icon" name="build"></ion-icon> </div>
+                    <div ng-click="model.deleteTaskById(task.Id)"><ion-icon class="icon trash-icon" name="trash"></ion-icon></div>
+                    <div ng-click="model.openTaskModal(task.Id)"><ion-icon class="icon edit-icon" name="build"></ion-icon></div>
                 </td>
             </tr>
         </tbody>
     </table>
+    <div ng-show="!model.tasks.length">
+        <p>You haven't added a task yet</p>
+        <a class="btn btn-primary" href="/Home/Add" role="button">Add Task</a>
+    </div>
+    <div class="loader" ng-show="model.loading">
+        <div class="lds-dual-ring"></div>
+    </div>
 </div>
 @*<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>*@
 

@@ -9,5 +9,6 @@ namespace todo_app.Data.Dtos
         public string Status { get; set; }
 
         public DateTime DeadlineUpdate { get; set; }
+
     }
 }

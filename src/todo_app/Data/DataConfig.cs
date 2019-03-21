@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using todo_app.Common.Services;
 using todo_app.Data.Dtos;
 using todo_app.Models;
 
@@ -10,6 +11,7 @@ namespace todo_app.Data
     public class DataConfig
     {
         SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
+        CommonService service = new CommonService();
 
         public void AddTask(TodoTask task)
         {
@@ -25,7 +27,7 @@ namespace todo_app.Data
             command.Parameters.AddWithValue("@CreatedOn", DateTime.Now);
 
             command.Parameters.AddWithValue("@Deadline", task.Deadline);
-
+         
             connection.Open();
 
             command.ExecuteNonQuery();
@@ -78,7 +80,7 @@ namespace todo_app.Data
 
             connection.Open();
             command.ExecuteNonQuery();
-            connection.Close();         
+            connection.Close();
         }
 
         public void UpdateTaskById(int id, TaskForUpdateDto task)

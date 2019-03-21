@@ -16,7 +16,9 @@ namespace todo_app.Models
         public DateTime CreatedOn { get; set; }
 
         public DateTime Deadline { get; set; }
-        
+
+        public string RemainingDays { get; set; }
+
         public string DeadlineUpdate { get; set; }
     }
 }
