@@ -26,7 +26,8 @@ namespace todo_app
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/bootstrap-datepicker.css",
-                      "~/Content/animate.min.css"));
+                      "~/Content/animate.min.css",
+                      "~/Content/alertify.css"));
 
             bundles.Add(new StyleBundle("~/bundles/ui-bootstrap")
                 .Include(
@@ -37,6 +38,10 @@ namespace todo_app
                .Include(
                    "~/Scripts/bootstrap-datepicker.js"
                ));
+            bundles.Add(new StyleBundle("~/bundles/alertify")
+               .Include(
+                   "~/Scripts/alertify.js"
+   ));
         }
     }
 }

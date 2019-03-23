@@ -7,8 +7,6 @@ angular
         controllerAs: 'model'
     });
 
-var taskArr;
-
 TaskListController.$inject = ['$http', '$uibModal'];
 
 function TaskListController($http, $uibModal) {
@@ -24,7 +22,6 @@ function TaskListController($http, $uibModal) {
             templateUrl: 'updateTaskModal.html',
             controller: ['$uibModalInstance', function ($uibModalInstance) {
                 var modal = this;
-
 
                 modal.$onInit = function () {
                     modal.task;
@@ -66,14 +63,17 @@ function TaskListController($http, $uibModal) {
         $http({
             method: 'POST',
             url: "/System/DeleteTaskById/" + id,
-        }).then(function () {
-            window.location.href = "Home/Tasks";
-        })
+        }).then(function () {  
+            var index = model.tasks.indexOf(id);
+            model.tasks.splice(index, 1); 
+            }).then(function () {
+                alertify.set('notifier', 'position', 'top-center');
+                alertify.success('Task have been deleted successfully');
+            })  
     }
     $http.get("/System/Get").then(function (d) {
 
         model.tasks = d.data;
-        taskArr = d.data[0];
 
     }).then(function () {
         return calculateDays(model.tasks);

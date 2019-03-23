@@ -18,7 +18,5 @@ function datepicker() {
             });
         }
     }
-
-    //$("#datepicker")
 }
 
