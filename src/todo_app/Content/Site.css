@@ -97,6 +97,21 @@
     padding: 10px 15px;
 }
 
+.notification-task {
+    position: absolute;
+    top: 0px;
+    background-color: #f32733;
+    text-align: center;
+    border-radius: 12px;
+    min-width: 18px;
+    padding: 0 5px;
+    height: 18px;
+    font-size: 12px;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 18px;
+}
+
 a {
     color: #1DC7EA;
 }
@@ -127,6 +142,17 @@ a {
     top: 1px;
 }
 
+.main-panel > .content {
+    padding: 30px 15px;
+    min-height: calc(100% - 123px);
+}
+/*add-task-form*/
+.content.add-task-form {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+}
+
     /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
@@ -135,11 +161,6 @@ a {
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
 
 table {
     margin-top: 20px;

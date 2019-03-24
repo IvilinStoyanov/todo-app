@@ -16,11 +16,11 @@
     <div class="wrapper">
         <div class="sidebar">
             <!-- side menu wrapper -->
-            <div class="side-menu-wrapper">
+            <div class="side-menu-wrapper" ng-controller="Test">
                 <!-- logo -->
                 <div class="logo">
                     <a href="#" class="simple-text">
-                        Task Manager
+                        Task Manager 
                     </a>
                 </div>
                 <!-- menu elements -->
@@ -33,14 +33,14 @@
                     </li>
                     <li>
                         <a href="/Home/Add">
-                            <ion-icon class="side-menu-icons" name="analytics"></ion-icon>
+                            <ion-icon class="side-menu-icons" name="add"></ion-icon>
                             <p>Add</p>
                         </a>
                     </li>
                     <li>
                         <a href="/Home/Tasks">
-                            <ion-icon class="side-menu-icons" name="add"></ion-icon>
-                            <p>Tasks</p>
+                            <ion-icon class="side-menu-icons" name="analytics"></ion-icon>
+                            <p>Tasks<span class="notification-task">{{activeTasks}}</span></p>
                         </a>
                     </li>
                 </ul>
