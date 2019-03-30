@@ -77,9 +77,7 @@ function TaskListController($http, $uibModal, taskFactory, $rootScope) {
         })
     }
     $http.get("/System/Get").then(function (d) {
-
         model.tasks = d.data;
-        $rootScope.$broadcast('tasks', model.tasks);
     }).then(function () {
         return calculateDays(model.tasks);
     }).then(function () {

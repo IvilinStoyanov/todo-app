@@ -13,6 +13,11 @@ namespace todo_app.Controllers
             return View();
         }
 
+        public ActionResult Panel()
+        {
+            return PartialView("~/Views/Home/Panel.cshtml");
+        }
+
         public ActionResult Tasks()
         {
             return PartialView("~/Views/Home/Tasks.cshtml");

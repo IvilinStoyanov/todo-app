@@ -168,6 +168,7 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angular\app.config.js" />
+    <Content Include="Scripts\angular\components\task-panel\task-panel.component.js" />
     <Content Include="Scripts\angular\directives\common.directives.js" />
     <Content Include="Scripts\angular\filters\task-app.filter.js" />
     <Content Include="Scripts\angular\ng-main-controller.js" />
@@ -212,10 +213,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Update.cshtml" />
     <Content Include="Views\Shared\_Error.cshtml" />
+    <Content Include="Views\Home\Panel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\angular\components\side-menu\" />
     <Folder Include="Views\Error\" />
     <Folder Include="Views\System\" />
     <Folder Include="Views\Template\" />

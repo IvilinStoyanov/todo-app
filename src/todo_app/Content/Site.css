@@ -38,7 +38,7 @@
     z-index: 1;
     color: #fff;
     font-weight: 200;
-    background: linear-gradient(rgba(147, 104, 233, 0.80), rgba(147, 104, 233, 0.80)), url("Images/sidebar-5.jpg");
+    background: linear-gradient(rgba(137, 151, 169, 0.44), rgba(47, 59, 115, 0.72)), url(Images/sidebar-5.jpg);
     background-size: cover;
     background-position: center center;
 }
@@ -264,3 +264,15 @@ select.ng-valid {
         transform: rotate(360deg);
     }
 }
+
+.container-notification-panel {
+    max-width: 900px;
+    padding-top: 100px;
+}
+
+.task-notification-panel {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
