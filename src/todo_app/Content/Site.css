@@ -276,3 +276,28 @@ select.ng-valid {
     margin-bottom: 30px;
 }
 
+/*panels*/
+
+.panel-success {
+    background: #00b09b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a1ec1f, #38b559); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a1ec1f, #38b559); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.panel-pending {
+    background: #06beb6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #48b1bf, #06beb6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #48b1bf, #06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.panel-active {
+    background: #108dc7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b7b7b7, #a3bcc7); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b7b7b7, #a3bcc7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.panel-warning {
+    background: #fffbd5; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e34040, #e4813a); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e34040, #e4813a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
