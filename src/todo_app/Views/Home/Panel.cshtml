@@ -1,39 +1,39 @@
 ﻿<div class="container container-notification-panel">
     <div class="row">
-        <div class="col-md-12">
-            <div class="col-sm-12 col-md-6">
+        <div class="thumbnail col-md-12">
+            <div>
+            <p class="panel-heading">Tasks</p>
+            </div>
+            <div class="col-sm-12 col-md-3">
                 <div class="thumbnail task-notification-panel panel-success">
                     <div class="caption">
-                        <h3>Completed Tasks</h3>
-                        <p>{{model.taskCompleted.length}}</p>
-                        <p><a href="#" class="btn btn-default" role="button">View More</a></p>
+                        <p class="panel-sub-heading">Completed Tasks</p>
+                        <p class="panel-task-count">{{model.taskCompleted.length}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-3">
                 <div class="thumbnail task-notification-panel panel-pending">
                     <div class="caption">
-                        <h3>Pending Tasks</h3>
-                        <p>{{model.taskPending.length}}</p>
-                        <p><a href="#" class="btn btn-default" role="button">View More</a></p>
+                        <p class="panel-sub-heading">Pending Tasks</p>
+                        <p class="panel-task-count">{{model.taskPending.length}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-3">
                 <div class="thumbnail task-notification-panel panel-active">
                     <div class="caption">
-                        <h3>Active Tasks</h3>
-                        <p>{{model.taskActive.length}}</p>
-                        <p><a href="#" class="btn btn-default" role="button">View More</a></p>
+                        <p class="panel-sub-heading">Active Tasks</p>
+                        <p class="panel-task-count">{{model.taskActive.length}}</p>
+
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-3">
                 <div class="thumbnail task-notification-panel panel-warning">
                     <div class="caption">
-                        <h3>Overdue Tasks</h3>
-                        <p>{{model.taskOverdue.length}}</p>
-                        <p><a href="#" class="btn btn-default" role="button">View More</a></p>
+                        <p class="panel-sub-heading">Overdue Tasks</p>
+                        <p class="panel-task-count">{{model.taskOverdue.length}}</p>
                     </div>
                 </div>
             </div>

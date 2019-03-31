@@ -22,7 +22,7 @@ namespace todo_app.Data
 
             command.Parameters.AddWithValue("@Description", task.Description);
 
-            command.Parameters.AddWithValue("@Status", task.Status);
+            command.Parameters.AddWithValue("@Status", "Pending");
 
             command.Parameters.AddWithValue("@CreatedOn", DateTime.Now);
 

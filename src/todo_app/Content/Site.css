@@ -1,5 +1,6 @@
 ﻿body {
     background: rgba(203, 203, 210, 0.15);
+    font-family: 'Roboto', sans-serif !important;
 }
 
     body .wrapper {
@@ -153,10 +154,10 @@ a {
     font-weight: 600;
 }
 
-    /* Override the default bootstrap behavior where horizontal description lists 
+/* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
-    .dl-horizontal dt {
+.dl-horizontal dt {
     white-space: normal;
 }
 
@@ -266,38 +267,76 @@ select.ng-valid {
 }
 
 .container-notification-panel {
-    max-width: 900px;
-    padding-top: 100px;
+
 }
 
 .task-notification-panel {
-    max-width: 400px;
+
     margin: 0 auto;
-    margin-bottom: 30px;
+ 
 }
 
 /*panels*/
 
+/*headings*/
+.panel-heading {
+    color: #555555;
+    border-bottom: 1px solid #efefef;
+    text-align: left;
+    padding-bottom: 2px;
+    font-size: 20px;
+}
+
+.panel-sub-heading {
+    padding-bottom: 2px;
+    border-bottom: 1px solid #efefef;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px #868686;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.panel-task-count {
+    text-align: center;
+    color: white;
+    font-size: 26px;
+}
+
+/*buttons*/
+.panel-btn {
+    color: #776e6e;
+    background-color: #fff;
+    border-color: #bfb5b5;
+    border-radius: 0px;
+    font-size: 13px;
+}
+
+
+
+/*colors*/
 .panel-success {
     background: #00b09b; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #a1ec1f, #38b559); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #a1ec1f, #38b559); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #38b55982, #2cec1f63); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38b55982, #2cec1f63); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .panel-pending {
     background: #06beb6; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #48b1bf, #06beb6); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #48b1bf, #06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #48b1bf8f, #06beb661); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #48b1bf8f, #06beb661); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .panel-active {
     background: #108dc7; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #b7b7b7, #a3bcc7); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #b7b7b7, #a3bcc7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #b7b7b77d, #a3bcc77d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b7b7b77d, #a3bcc77d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .panel-warning {
     background: #fffbd5; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #e34040, #e4813a); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #e34040, #e4813a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #e3404085, #e4813a75); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e3404085, #e4813a75); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

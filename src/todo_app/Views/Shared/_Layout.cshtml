@@ -9,6 +9,7 @@
     @Scripts.Render("~/bundles/modernizr")
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-notification/0.3.6/angular-ui-notification.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 
 </head>
 <body>
@@ -40,7 +41,7 @@
                     <li>
                         <a href="/Home/Tasks">
                             <ion-icon class="side-menu-icons" name="analytics"></ion-icon>
-                            <p>Tasks<span class="notification-task">{{activeTasks}}</span></p>
+                            <p>Tasks<span ng-show="activeTasks != 0" class="notification-task">{{activeTasks}}</span></p>
                         </a>
                     </li>
                 </ul>

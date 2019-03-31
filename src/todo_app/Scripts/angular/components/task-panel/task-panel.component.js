@@ -23,7 +23,6 @@ function TaskListController($http, $uibModal, taskFactory, $rootScope) {
    
     $http.get("/System/Get").then(function (d) {
         model.tasks = d.data;
-         $rootScope.$broadcast('tasks', model.tasks);
         for (var index = 0; index < model.tasks.length; index++) {
             if (model.tasks[index].Status == 'Completed') {
                 model.taskCompleted.push(model.tasks[index]);
@@ -35,11 +34,7 @@ function TaskListController($http, $uibModal, taskFactory, $rootScope) {
                 model.taskOverdue.push(model.tasks[index]);
             }
         }
-        console.log(model.taskCompleted);
-        console.log(model.taskPending);
-        console.log(model.taskActive);
-        console.log(model.taskOverdue);
-
+        $rootScope.$broadcast("tasks", model.taskActive);
     }).then(function () {
         model.loading = false;
     })

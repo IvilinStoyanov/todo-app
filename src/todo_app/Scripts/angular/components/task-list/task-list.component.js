@@ -11,9 +11,9 @@ angular
         }
     })
 
-TaskListController.$inject = ['$http', '$uibModal', 'taskFactory', '$rootScope'];
+TaskListController.$inject = ['$http', '$uibModal', 'taskFactory', '$rootScope', '$location'];
 
-function TaskListController($http, $uibModal, taskFactory, $rootScope) {
+function TaskListController($http, $uibModal, taskFactory, $rootScope, $location) {
     var model = this;
     model.loading = true;
 
@@ -21,7 +21,7 @@ function TaskListController($http, $uibModal, taskFactory, $rootScope) {
         model.openTaskModal = openTaskModal;      
     }
    
-
+                            // TODO: Add semantic ui modal 
     function openTaskModal(id) {
         $uibModal.open({
             templateUrl: 'updateTaskModal.html',
@@ -42,6 +42,7 @@ function TaskListController($http, $uibModal, taskFactory, $rootScope) {
                         data: modal.task
                     }).then(function () {
                         window.location.href = "Home/Tasks";
+                        //$location.path('Home/Tasks', false);
                     })
                 };
 
