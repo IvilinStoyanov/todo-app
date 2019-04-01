@@ -1,27 +1,27 @@
 ﻿<div class="container container-notification-panel">
     <div class="row">
-        <div class="thumbnail col-md-12">
+        <div class="panel col-md-12">
             <div>
-            <p class="panel-heading">Tasks</p>
+                <p class="panel-heading">Tasks</p>
             </div>
-            <div class="col-sm-12 col-md-3">
-                <div class="thumbnail task-notification-panel panel-success">
+            <div class="col-sm-12 col-md-3 panel-box">
+                <div class="panel task-notification-panel panel-success">
                     <div class="caption">
                         <p class="panel-sub-heading">Completed Tasks</p>
                         <p class="panel-task-count">{{model.taskCompleted.length}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-3">
-                <div class="thumbnail task-notification-panel panel-pending">
+            <div class="col-sm-12 col-md-3 panel-box">
+                <div class="panel task-notification-panel panel-pending">
                     <div class="caption">
                         <p class="panel-sub-heading">Pending Tasks</p>
                         <p class="panel-task-count">{{model.taskPending.length}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-3">
-                <div class="thumbnail task-notification-panel panel-active">
+            <div class="col-sm-12 col-md-3 panel-box">
+                <div class="panel task-notification-panel panel-active">
                     <div class="caption">
                         <p class="panel-sub-heading">Active Tasks</p>
                         <p class="panel-task-count">{{model.taskActive.length}}</p>
@@ -29,8 +29,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-3">
-                <div class="thumbnail task-notification-panel panel-warning">
+            <div class="col-sm-12 col-md-3 panel-box">
+                <div class="panel task-notification-panel panel-warning">
                     <div class="caption">
                         <p class="panel-sub-heading">Overdue Tasks</p>
                         <p class="panel-task-count">{{model.taskOverdue.length}}</p>
@@ -39,4 +39,7 @@
             </div>
         </div>
     </div>
+</div>
+<div class="loader-wrapper" ng-show="model.loading">
+    <div class="loader">Loading...</div>
 </div>
